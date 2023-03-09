@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
 		ssh agent(['Deploy_user']) {
-		sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/jenkins-pipe/target/webapp-0.2.war centos@54.91.124.78:/opt/tomcat
+		sh "scp -o StrictHostKeyChecking=no git branch: 'main', url: 'https://github.com/johy9/Jenkins-ci-cd-project.git' centos@54.91.124.78:/opt/tomcat
             }
         }
     }
